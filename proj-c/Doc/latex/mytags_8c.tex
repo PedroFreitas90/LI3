@@ -1,0 +1,132 @@
+\hypertarget{mytags_8c}{}\section{lib/mytags.c File Reference}
+\label{mytags_8c}\index{lib/mytags.\+c@{lib/mytags.\+c}}
+
+
+Ficheiro que contém a implementação das Tags.  
+
+
+{\ttfamily \#include \char`\"{}mytags.\+h\char`\"{}}\\*
+Include dependency graph for mytags.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{mytags_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtag}{tag}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Tag \hyperlink{mytags_8c_aaba7ed4551722063bfbc2e34b3f657ed}{init\+Tag} ()
+\begin{DoxyCompactList}\small\item\em Inicializa uma Tag. \end{DoxyCompactList}\item 
+Tag \hyperlink{mytags_8c_ac7296164bf5ca83d6f1a487fc55987e9}{create\+Tag} (long id, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Cria uma Tag. \end{DoxyCompactList}\item 
+long \hyperlink{mytags_8c_a3d33d8daebb69d85b40779c25dbbf378}{get\+Tag\+Id} (Tag t)
+\begin{DoxyCompactList}\small\item\em Retorna o id de uma Tag. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{mytags_8c_ac5b9468b420ff068ca72dd4df27bf90f}{get\+Tag\+Name} (Tag t)
+\begin{DoxyCompactList}\small\item\em Retorna a string com o nome da Tag. \end{DoxyCompactList}\item 
+void \hyperlink{mytags_8c_a41c163d83371fa80c233c476f215668d}{free\+Tag} (void $\ast$t)
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por uma Tag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contém a implementação das Tags. 
+
+
+
+\subsection{Function Documentation}
+\index{mytags.\+c@{mytags.\+c}!create\+Tag@{create\+Tag}}
+\index{create\+Tag@{create\+Tag}!mytags.\+c@{mytags.\+c}}
+\subsubsection[{\texorpdfstring{create\+Tag(long id, char $\ast$name)}{createTag(long id, char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}Tag create\+Tag (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{mytags_8c_ac7296164bf5ca83d6f1a487fc55987e9}{}\label{mytags_8c_ac7296164bf5ca83d6f1a487fc55987e9}
+
+
+Cria uma Tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & id da Tag. \\
+\hline
+{\em char$\ast$} & string com o nome da Tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tag criada. 
+\end{DoxyReturn}
+\index{mytags.\+c@{mytags.\+c}!free\+Tag@{free\+Tag}}
+\index{free\+Tag@{free\+Tag}!mytags.\+c@{mytags.\+c}}
+\subsubsection[{\texorpdfstring{free\+Tag(void $\ast$t)}{freeTag(void *t)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Tag (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{mytags_8c_a41c163d83371fa80c233c476f215668d}{}\label{mytags_8c_a41c163d83371fa80c233c476f215668d}
+
+
+Liberta a memória alocada por uma Tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & apontador para a Tag a limpar da memória. \\
+\hline
+\end{DoxyParams}
+\index{mytags.\+c@{mytags.\+c}!get\+Tag\+Id@{get\+Tag\+Id}}
+\index{get\+Tag\+Id@{get\+Tag\+Id}!mytags.\+c@{mytags.\+c}}
+\subsubsection[{\texorpdfstring{get\+Tag\+Id(\+Tag t)}{getTagId(Tag t)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Tag\+Id (
+\begin{DoxyParamCaption}
+\item[{Tag}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{mytags_8c_a3d33d8daebb69d85b40779c25dbbf378}{}\label{mytags_8c_a3d33d8daebb69d85b40779c25dbbf378}
+
+
+Retorna o id de uma Tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tag} & tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long id da Tag. 
+\end{DoxyReturn}
+\index{mytags.\+c@{mytags.\+c}!get\+Tag\+Name@{get\+Tag\+Name}}
+\index{get\+Tag\+Name@{get\+Tag\+Name}!mytags.\+c@{mytags.\+c}}
+\subsubsection[{\texorpdfstring{get\+Tag\+Name(\+Tag t)}{getTagName(Tag t)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Tag\+Name (
+\begin{DoxyParamCaption}
+\item[{Tag}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{mytags_8c_ac5b9468b420ff068ca72dd4df27bf90f}{}\label{mytags_8c_ac5b9468b420ff068ca72dd4df27bf90f}
+
+
+Retorna a string com o nome da Tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tag} & tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ string com o nome da Tag. 
+\end{DoxyReturn}
+\index{mytags.\+c@{mytags.\+c}!init\+Tag@{init\+Tag}}
+\index{init\+Tag@{init\+Tag}!mytags.\+c@{mytags.\+c}}
+\subsubsection[{\texorpdfstring{init\+Tag()}{initTag()}}]{\setlength{\rightskip}{0pt plus 5cm}Tag init\+Tag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{mytags_8c_aaba7ed4551722063bfbc2e34b3f657ed}{}\label{mytags_8c_aaba7ed4551722063bfbc2e34b3f657ed}
+
+
+Inicializa uma Tag. 
+
+\begin{DoxyReturn}{Returns}
+Tag inicializada. 
+\end{DoxyReturn}

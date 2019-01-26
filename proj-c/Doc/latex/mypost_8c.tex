@@ -1,0 +1,611 @@
+\hypertarget{mypost_8c}{}\section{lib/mypost.c File Reference}
+\label{mypost_8c}\index{lib/mypost.\+c@{lib/mypost.\+c}}
+
+
+Ficheiro que contém a implementação de Posts.  
+
+
+{\ttfamily \#include \char`\"{}mypost.\+h\char`\"{}}\\*
+Include dependency graph for mypost.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{mypost_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpost}{post}
+\item 
+struct \hyperlink{structarrayd}{arrayd}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mypost_8c_ab8a47f6d0923c429c54e170b571d77f7}{destroy\+Date} (void $\ast$d)
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por um Date. \end{DoxyCompactList}\item 
+ArrayD \hyperlink{mypost_8c_a83123be62b43a4344152fe3322845959}{create\+Array} (long comp)
+\begin{DoxyCompactList}\small\item\em Cria um array dinâmico que guarda Posts, e o número de respostas e perguntas que existem nesse array de Posts. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_a0422e3ea2484a562cacd5fd93c6a6245}{get\+Per} (ArrayD d)
+\begin{DoxyCompactList}\small\item\em Retorna o número de perguntas contidas num dado array dinâmico. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_a2cd9be6e1af0dee1e594b039d1c32802}{get\+Res} (ArrayD d)
+\begin{DoxyCompactList}\small\item\em Retorna o número de respostas contidas num dado array dinâmico. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_a14f813adb13a6cf36c3970b099592bed}{get\+Size} (ArrayD d)
+\begin{DoxyCompactList}\small\item\em Retorna o tamanho de um dado array dinâmico. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_ab45c162a0a087cd5a97ec32acf07e64e}{get\+Used} (ArrayD d)
+\begin{DoxyCompactList}\small\item\em Retorna o número de Posts num dado array. \end{DoxyCompactList}\item 
+Post \hyperlink{mypost_8c_ac62d16e6655590742b069a81eb706ae8}{get\+Ind} (ArrayD d, int i)
+\begin{DoxyCompactList}\small\item\em Retorna o Post na posição i de um dado array. \end{DoxyCompactList}\item 
+void \hyperlink{mypost_8c_a941c5997473a2c326470c9a160dd1353}{insere\+Array} (ArrayD a, Post p)
+\begin{DoxyCompactList}\small\item\em Insere um Post no array. \end{DoxyCompactList}\item 
+void \hyperlink{mypost_8c_ad3cfdd23ee8961e4ec37ae7e1db0fa21}{free\+Array} (void $\ast$a)
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada pelo array dinâmico. \end{DoxyCompactList}\item 
+Post \hyperlink{mypost_8c_a447ee3ca0284888e6e6f99a12947214d}{init\+Post} ()
+\begin{DoxyCompactList}\small\item\em Inicializa um Post. \end{DoxyCompactList}\item 
+Post \hyperlink{mypost_8c_a571b7eb408a43c5b82df7d6fac1f8a4f}{create\+Post} (long id, int type, long pid, int score, int vcount, Date \hyperlink{structdate}{date}, long owner, int owner\+Rep, int numcom, int nres, char $\ast$titulo, char $\ast$$\ast$tags, int ntags)
+\begin{DoxyCompactList}\small\item\em Cria um Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_a5a8e6e6892343a91c4a70f5154be0599}{get\+Post\+N\+Tags} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o número de tags de um dado Post. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{mypost_8c_a65b2a388e96d9d7c029865ddb637e450}{get\+Post\+Tags} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o array das tags de um dado Post. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_adb73d0b3c07f4b9feeae024686d7a3d4}{get\+Post\+Id} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o id de um dado Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_a578efbc7cd6ad9228922866bdf231d24}{get\+Post\+Type} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o tipo de um dado Post. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_a5ff92bcb8da462016044050028dceb34}{get\+Pid} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o id do Post que é resposta a um dado Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_a75c2a14031096808c6226419ff9b6c03}{get\+Post\+Score} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o score de um dado Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_a003913396994b0a67fa2a062561ea0d9}{get\+Post\+V\+Count} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o view count do Post. \end{DoxyCompactList}\item 
+Date \hyperlink{mypost_8c_a29f29e82c01f2a165ea274200c3e6b94}{get\+Post\+Date} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna a data de criação de um dado Post. \end{DoxyCompactList}\item 
+long \hyperlink{mypost_8c_a09ca67bb4254dea11577028daec75f34}{get\+Post\+Owner} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o criador de um dado Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_a7803324c92714fff36605cd8965a7cac}{get\+Post\+Owner\+Rep} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna a reputação do criador de um dado Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_acadf55e406d696414e9b7a74c905857e}{get\+Post\+Num\+Com} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o número de comentários de um dado Post. \end{DoxyCompactList}\item 
+int \hyperlink{mypost_8c_afced8c6830b08e4505611e03b9fc8a59}{get\+Post\+N\+Res} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o número de respostas de um dado Post. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{mypost_8c_a63400c02beeeb9b215fec3e0b6f48c26}{get\+Post\+Titulo} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna o título de um dado Post. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{mypost_8c_a159923abd9e11ec696e82b6b1229f713}{get\+TagI} (Post p, int index)
+\begin{DoxyCompactList}\small\item\em Retorna a Tag de um determinado índice. \end{DoxyCompactList}\item 
+double \hyperlink{mypost_8c_a74f96bf16e489c7f45152b8fb1204c48}{calc\+Media} (Post p)
+\begin{DoxyCompactList}\small\item\em Retorna a média ponderada da classificação de uma resposta. \end{DoxyCompactList}\item 
+void \hyperlink{mypost_8c_a9eb6fe72098a54cd4bc0bf4d4b064f21}{free\+Post} (void $\ast$p)
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por um Post. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contém a implementação de Posts. 
+
+Ficheiro que contém a implementação de Users.
+
+\subsection{Function Documentation}
+\index{mypost.\+c@{mypost.\+c}!calc\+Media@{calc\+Media}}
+\index{calc\+Media@{calc\+Media}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{calc\+Media(\+Post p)}{calcMedia(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}double calc\+Media (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a74f96bf16e489c7f45152b8fb1204c48}{}\label{mypost_8c_a74f96bf16e489c7f45152b8fb1204c48}
+
+
+Retorna a média ponderada da classificação de uma resposta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double classificação da resposta. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!create\+Array@{create\+Array}}
+\index{create\+Array@{create\+Array}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{create\+Array(long comp)}{createArray(long comp)}}]{\setlength{\rightskip}{0pt plus 5cm}ArrayD create\+Array (
+\begin{DoxyParamCaption}
+\item[{long}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a83123be62b43a4344152fe3322845959}{}\label{mypost_8c_a83123be62b43a4344152fe3322845959}
+
+
+Cria um array dinâmico que guarda Posts, e o número de respostas e perguntas que existem nesse array de Posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & tamanho a dar ao array. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!create\+Post@{create\+Post}}
+\index{create\+Post@{create\+Post}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{create\+Post(long id, int type, long pid, int score, int vcount, Date date, long owner, int owner\+Rep, int numcom, int nres, char $\ast$titulo, char $\ast$$\ast$tags, int ntags)}{createPost(long id, int type, long pid, int score, int vcount, Date date, long owner, int ownerRep, int numcom, int nres, char *titulo, char **tags, int ntags)}}]{\setlength{\rightskip}{0pt plus 5cm}Post create\+Post (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{int}]{type, }
+\item[{long}]{pid, }
+\item[{int}]{score, }
+\item[{int}]{vcount, }
+\item[{Date}]{date, }
+\item[{long}]{owner, }
+\item[{int}]{owner\+Rep, }
+\item[{int}]{numcom, }
+\item[{int}]{nres, }
+\item[{char $\ast$}]{titulo, }
+\item[{char $\ast$$\ast$}]{tags, }
+\item[{int}]{ntags}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a571b7eb408a43c5b82df7d6fac1f8a4f}{}\label{mypost_8c_a571b7eb408a43c5b82df7d6fac1f8a4f}
+
+
+Cria um Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & id do Post. \\
+\hline
+{\em int} & tipo do Post. \\
+\hline
+{\em long} & parent id do Post. \\
+\hline
+{\em int} & score do Post. \\
+\hline
+{\em int} & view count do Post. \\
+\hline
+{\em Date} & data de criação do Post. \\
+\hline
+{\em long} & id do User que criou o Post. \\
+\hline
+{\em int} & reputação do User que criou o Post. \\
+\hline
+{\em int} & número de comentários do Post. \\
+\hline
+{\em int} & de respostas do Post. \\
+\hline
+{\em char$\ast$} & título do Post. \\
+\hline
+{\em char$\ast$$\ast$} & array com as tags do Post. \\
+\hline
+{\em int} & número de tags do Post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Post criado. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!destroy\+Date@{destroy\+Date}}
+\index{destroy\+Date@{destroy\+Date}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{destroy\+Date(void $\ast$d)}{destroyDate(void *d)}}]{\setlength{\rightskip}{0pt plus 5cm}void destroy\+Date (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_ab8a47f6d0923c429c54e170b571d77f7}{}\label{mypost_8c_ab8a47f6d0923c429c54e170b571d77f7}
+
+
+Liberta a memória alocada por um Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & apontador para uma data. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!free\+Array@{free\+Array}}
+\index{free\+Array@{free\+Array}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{free\+Array(void $\ast$a)}{freeArray(void *a)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Array (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_ad3cfdd23ee8961e4ec37ae7e1db0fa21}{}\label{mypost_8c_ad3cfdd23ee8961e4ec37ae7e1db0fa21}
+
+
+Liberta a memória alocada pelo array dinâmico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & apontador para o array. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!free\+Post@{free\+Post}}
+\index{free\+Post@{free\+Post}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{free\+Post(void $\ast$p)}{freePost(void *p)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Post (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a9eb6fe72098a54cd4bc0bf4d4b064f21}{}\label{mypost_8c_a9eb6fe72098a54cd4bc0bf4d4b064f21}
+
+
+Liberta a memória alocada por um Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & apontador para o Post a limpar da memória. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!get\+Ind@{get\+Ind}}
+\index{get\+Ind@{get\+Ind}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Ind(\+Array\+D d, int i)}{getInd(ArrayD d, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}Post get\+Ind (
+\begin{DoxyParamCaption}
+\item[{ArrayD}]{d, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_ac62d16e6655590742b069a81eb706ae8}{}\label{mypost_8c_ac62d16e6655590742b069a81eb706ae8}
+
+
+Retorna o Post na posição i de um dado array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArrayD} & array dinâmico. \\
+\hline
+{\em int} & índice i. return Post na posição i do array. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!get\+Per@{get\+Per}}
+\index{get\+Per@{get\+Per}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Per(\+Array\+D d)}{getPer(ArrayD d)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Per (
+\begin{DoxyParamCaption}
+\item[{ArrayD}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a0422e3ea2484a562cacd5fd93c6a6245}{}\label{mypost_8c_a0422e3ea2484a562cacd5fd93c6a6245}
+
+
+Retorna o número de perguntas contidas num dado array dinâmico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArrayD} & array dinâmico. return long número de perguntas contidas no array de Posts. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!get\+Pid@{get\+Pid}}
+\index{get\+Pid@{get\+Pid}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Pid(\+Post p)}{getPid(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Pid (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a5ff92bcb8da462016044050028dceb34}{}\label{mypost_8c_a5ff92bcb8da462016044050028dceb34}
+
+
+Retorna o id do Post que é resposta a um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long id do Post que responde ao Post dado. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Date@{get\+Post\+Date}}
+\index{get\+Post\+Date@{get\+Post\+Date}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Date(\+Post p)}{getPostDate(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}Date get\+Post\+Date (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a29f29e82c01f2a165ea274200c3e6b94}{}\label{mypost_8c_a29f29e82c01f2a165ea274200c3e6b94}
+
+
+Retorna a data de criação de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Date data do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Id@{get\+Post\+Id}}
+\index{get\+Post\+Id@{get\+Post\+Id}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Id(\+Post p)}{getPostId(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Post\+Id (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_adb73d0b3c07f4b9feeae024686d7a3d4}{}\label{mypost_8c_adb73d0b3c07f4b9feeae024686d7a3d4}
+
+
+Retorna o id de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long id do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+N\+Res@{get\+Post\+N\+Res}}
+\index{get\+Post\+N\+Res@{get\+Post\+N\+Res}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+N\+Res(\+Post p)}{getPostNRes(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+N\+Res (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_afced8c6830b08e4505611e03b9fc8a59}{}\label{mypost_8c_afced8c6830b08e4505611e03b9fc8a59}
+
+
+Retorna o número de respostas de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de respostas do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+N\+Tags@{get\+Post\+N\+Tags}}
+\index{get\+Post\+N\+Tags@{get\+Post\+N\+Tags}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+N\+Tags(\+Post p)}{getPostNTags(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+N\+Tags (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a5a8e6e6892343a91c4a70f5154be0599}{}\label{mypost_8c_a5a8e6e6892343a91c4a70f5154be0599}
+
+
+Retorna o número de tags de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de tags contidas nesse Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Num\+Com@{get\+Post\+Num\+Com}}
+\index{get\+Post\+Num\+Com@{get\+Post\+Num\+Com}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Num\+Com(\+Post p)}{getPostNumCom(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+Num\+Com (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_acadf55e406d696414e9b7a74c905857e}{}\label{mypost_8c_acadf55e406d696414e9b7a74c905857e}
+
+
+Retorna o número de comentários de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de comentários do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Owner@{get\+Post\+Owner}}
+\index{get\+Post\+Owner@{get\+Post\+Owner}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Owner(\+Post p)}{getPostOwner(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Post\+Owner (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a09ca67bb4254dea11577028daec75f34}{}\label{mypost_8c_a09ca67bb4254dea11577028daec75f34}
+
+
+Retorna o criador de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long id do criador do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Owner\+Rep@{get\+Post\+Owner\+Rep}}
+\index{get\+Post\+Owner\+Rep@{get\+Post\+Owner\+Rep}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Owner\+Rep(\+Post p)}{getPostOwnerRep(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+Owner\+Rep (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a7803324c92714fff36605cd8965a7cac}{}\label{mypost_8c_a7803324c92714fff36605cd8965a7cac}
+
+
+Retorna a reputação do criador de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int reputação do criador do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Score@{get\+Post\+Score}}
+\index{get\+Post\+Score@{get\+Post\+Score}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Score(\+Post p)}{getPostScore(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+Score (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a75c2a14031096808c6226419ff9b6c03}{}\label{mypost_8c_a75c2a14031096808c6226419ff9b6c03}
+
+
+Retorna o score de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int score do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Tags@{get\+Post\+Tags}}
+\index{get\+Post\+Tags@{get\+Post\+Tags}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Tags(\+Post p)}{getPostTags(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ get\+Post\+Tags (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a65b2a388e96d9d7c029865ddb637e450}{}\label{mypost_8c_a65b2a388e96d9d7c029865ddb637e450}
+
+
+Retorna o array das tags de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$$\ast$ array das tags contidas nesse Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Titulo@{get\+Post\+Titulo}}
+\index{get\+Post\+Titulo@{get\+Post\+Titulo}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Titulo(\+Post p)}{getPostTitulo(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Post\+Titulo (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a63400c02beeeb9b215fec3e0b6f48c26}{}\label{mypost_8c_a63400c02beeeb9b215fec3e0b6f48c26}
+
+
+Retorna o título de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ título do post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+Type@{get\+Post\+Type}}
+\index{get\+Post\+Type@{get\+Post\+Type}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+Type(\+Post p)}{getPostType(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+Type (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a578efbc7cd6ad9228922866bdf231d24}{}\label{mypost_8c_a578efbc7cd6ad9228922866bdf231d24}
+
+
+Retorna o tipo de um dado Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int tipo do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Post\+V\+Count@{get\+Post\+V\+Count}}
+\index{get\+Post\+V\+Count@{get\+Post\+V\+Count}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Post\+V\+Count(\+Post p)}{getPostVCount(Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Post\+V\+Count (
+\begin{DoxyParamCaption}
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a003913396994b0a67fa2a062561ea0d9}{}\label{mypost_8c_a003913396994b0a67fa2a062561ea0d9}
+
+
+Retorna o view count do Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int view count do Post. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Res@{get\+Res}}
+\index{get\+Res@{get\+Res}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Res(\+Array\+D d)}{getRes(ArrayD d)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Res (
+\begin{DoxyParamCaption}
+\item[{ArrayD}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a2cd9be6e1af0dee1e594b039d1c32802}{}\label{mypost_8c_a2cd9be6e1af0dee1e594b039d1c32802}
+
+
+Retorna o número de respostas contidas num dado array dinâmico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArrayD} & array dinâmico. return long número de respostas contidas no array de Posts. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Size(\+Array\+D d)}{getSize(ArrayD d)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Size (
+\begin{DoxyParamCaption}
+\item[{ArrayD}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a14f813adb13a6cf36c3970b099592bed}{}\label{mypost_8c_a14f813adb13a6cf36c3970b099592bed}
+
+
+Retorna o tamanho de um dado array dinâmico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArrayD} & array dinâmico. return long tamanho do array. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!get\+TagI@{get\+TagI}}
+\index{get\+TagI@{get\+TagI}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Tag\+I(\+Post p, int index)}{getTagI(Post p, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+TagI (
+\begin{DoxyParamCaption}
+\item[{Post}]{p, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a159923abd9e11ec696e82b6b1229f713}{}\label{mypost_8c_a159923abd9e11ec696e82b6b1229f713}
+
+
+Retorna a Tag de um determinado índice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Post} & post. \\
+\hline
+{\em int} & índice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ Tag da posição index. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!get\+Used@{get\+Used}}
+\index{get\+Used@{get\+Used}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{get\+Used(\+Array\+D d)}{getUsed(ArrayD d)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Used (
+\begin{DoxyParamCaption}
+\item[{ArrayD}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_ab45c162a0a087cd5a97ec32acf07e64e}{}\label{mypost_8c_ab45c162a0a087cd5a97ec32acf07e64e}
+
+
+Retorna o número de Posts num dado array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArrayD} & array dinâmico. return long número de Posts contidos no array. \\
+\hline
+\end{DoxyParams}
+\index{mypost.\+c@{mypost.\+c}!init\+Post@{init\+Post}}
+\index{init\+Post@{init\+Post}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{init\+Post()}{initPost()}}]{\setlength{\rightskip}{0pt plus 5cm}Post init\+Post (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a447ee3ca0284888e6e6f99a12947214d}{}\label{mypost_8c_a447ee3ca0284888e6e6f99a12947214d}
+
+
+Inicializa um Post. 
+
+\begin{DoxyReturn}{Returns}
+Post inicializado. 
+\end{DoxyReturn}
+\index{mypost.\+c@{mypost.\+c}!insere\+Array@{insere\+Array}}
+\index{insere\+Array@{insere\+Array}!mypost.\+c@{mypost.\+c}}
+\subsubsection[{\texorpdfstring{insere\+Array(\+Array\+D a, Post p)}{insereArray(ArrayD a, Post p)}}]{\setlength{\rightskip}{0pt plus 5cm}void insere\+Array (
+\begin{DoxyParamCaption}
+\item[{ArrayD}]{a, }
+\item[{Post}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{mypost_8c_a941c5997473a2c326470c9a160dd1353}{}\label{mypost_8c_a941c5997473a2c326470c9a160dd1353}
+
+
+Insere um Post no array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ArrayD} & array dinâmico. \\
+\hline
+{\em Post} & post. \\
+\hline
+\end{DoxyParams}

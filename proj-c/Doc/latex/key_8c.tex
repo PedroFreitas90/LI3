@@ -1,0 +1,93 @@
+\hypertarget{key_8c}{}\section{lib/key.c File Reference}
+\label{key_8c}\index{lib/key.\+c@{lib/key.\+c}}
+
+
+Ficheiro que contem a implementação de Keys. Uma Key é um apontador para um long.  
+
+
+{\ttfamily \#include \char`\"{}key.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for key.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{key_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structkey}{key}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Key \hyperlink{key_8c_a98312906fb7539d5686b6ed4da8e4a83}{create\+Key} (long \hyperlink{structkey}{key})
+\begin{DoxyCompactList}\small\item\em Converte um long numa Key. \end{DoxyCompactList}\item 
+long \hyperlink{key_8c_aafa85a69939ac8b8cd9aba6246792345}{get\+Key} (Key k)
+\begin{DoxyCompactList}\small\item\em Converte uma Key num long. \end{DoxyCompactList}\item 
+void \hyperlink{key_8c_a5e45aa2012aec92f703a59dde97ba4b9}{freekey} (Key k)
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por uma Key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contem a implementação de Keys. Uma Key é um apontador para um long. 
+
+
+
+\subsection{Function Documentation}
+\index{key.\+c@{key.\+c}!create\+Key@{create\+Key}}
+\index{create\+Key@{create\+Key}!key.\+c@{key.\+c}}
+\subsubsection[{\texorpdfstring{create\+Key(long key)}{createKey(long key)}}]{\setlength{\rightskip}{0pt plus 5cm}Key create\+Key (
+\begin{DoxyParamCaption}
+\item[{long}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{key_8c_a98312906fb7539d5686b6ed4da8e4a83}{}\label{key_8c_a98312906fb7539d5686b6ed4da8e4a83}
+
+
+Converte um long numa Key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & a ser convertido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Key criada. 
+\end{DoxyReturn}
+\index{key.\+c@{key.\+c}!freekey@{freekey}}
+\index{freekey@{freekey}!key.\+c@{key.\+c}}
+\subsubsection[{\texorpdfstring{freekey(\+Key k)}{freekey(Key k)}}]{\setlength{\rightskip}{0pt plus 5cm}void freekey (
+\begin{DoxyParamCaption}
+\item[{Key}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{key_8c_a5e45aa2012aec92f703a59dde97ba4b9}{}\label{key_8c_a5e45aa2012aec92f703a59dde97ba4b9}
+
+
+Liberta a memória alocada por uma Key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & a ser libertada. \\
+\hline
+\end{DoxyParams}
+\index{key.\+c@{key.\+c}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!key.\+c@{key.\+c}}
+\subsubsection[{\texorpdfstring{get\+Key(\+Key k)}{getKey(Key k)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Key (
+\begin{DoxyParamCaption}
+\item[{Key}]{k}
+\end{DoxyParamCaption}
+)}\hypertarget{key_8c_aafa85a69939ac8b8cd9aba6246792345}{}\label{key_8c_aafa85a69939ac8b8cd9aba6246792345}
+
+
+Converte uma Key num long. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key} & a ser convertida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long. 
+\end{DoxyReturn}

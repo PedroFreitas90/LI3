@@ -1,0 +1,332 @@
+\hypertarget{heap_8c}{}\section{lib/heap.c File Reference}
+\label{heap_8c}\index{lib/heap.\+c@{lib/heap.\+c}}
+
+
+Ficheiro que contém a implementação de Max Heap\textquotesingle{}s de Posts.  
+
+
+{\ttfamily \#include \char`\"{}heap.\+h\char`\"{}}\\*
+Include dependency graph for heap.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{heap_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structheap}{heap}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+AI}(i)~(i-\/1)/2\hypertarget{heap_8c_a14497210befd92eb06223d770691914f}{}\label{heap_8c_a14497210befd92eb06223d770691914f}
+
+\item 
+\#define {\bfseries E\+S\+Q\+U\+E\+R\+DO}(i)~2$\ast$i + 1\hypertarget{heap_8c_aec0cd9b4eb09bfe7a565a67af16afe93}{}\label{heap_8c_aec0cd9b4eb09bfe7a565a67af16afe93}
+
+\item 
+\#define {\bfseries D\+I\+R\+E\+I\+TO}(i)~2$\ast$i + 2\hypertarget{heap_8c_ac6e409ddb66a55671170033763e3bb41}{}\label{heap_8c_ac6e409ddb66a55671170033763e3bb41}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{heap_8c_a2c1c49ae1a90173c3552e091f075872f}{mais\+Recente} (Date date1, Date date2)
+\begin{DoxyCompactList}\small\item\em Compara duas datas. \end{DoxyCompactList}\item 
+static Heap \hyperlink{heap_8c_a63a74d52123275bd3abe9b01cecf3131}{swap} (Heap \hyperlink{structheap}{heap}, int n1, int n2)
+\begin{DoxyCompactList}\small\item\em Troca dois elementos da heap. \end{DoxyCompactList}\item 
+static Heap \hyperlink{heap_8c_a9206bc25fe50ab5a7e9980e10837f324}{bubble\+Down} (Heap \hyperlink{structheap}{heap}, int n, char ord)
+\begin{DoxyCompactList}\small\item\em Realiza o bubble down da heap. \end{DoxyCompactList}\item 
+static Heap \hyperlink{heap_8c_ae688b66c4e24bc6d8c0b2e0f5ec1414b}{bubble\+Up} (Heap \hyperlink{structheap}{heap}, int i, char ord)
+\begin{DoxyCompactList}\small\item\em Realiza o bubble up da heap. \end{DoxyCompactList}\item 
+Heap \hyperlink{heap_8c_abf46e093e8100cebe3aca6545aead1c5}{init\+Heap} ()
+\begin{DoxyCompactList}\small\item\em Inicia uma nova heap de posts. \end{DoxyCompactList}\item 
+Heap \hyperlink{heap_8c_a723709e7ce9f31c874a07eaf6b800db5}{init\+Heap\+Pal} (char $\ast$word)
+\begin{DoxyCompactList}\small\item\em Inicia uma nova heap de posts que guarda adicionalmente uma dada palavra. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{heap_8c_ad750d8237bbcc3bad7b2183544f00f02}{get\+Heap\+Pal} (Heap h)
+\begin{DoxyCompactList}\small\item\em Devolve a palavra guardada na heap. \end{DoxyCompactList}\item 
+Heap \hyperlink{heap_8c_a57b1aa828dd4a3a09eecdbe2c2a014d4}{heap\+\_\+push} (Heap \hyperlink{structheap}{heap}, Post \hyperlink{structpost}{post}, char ord)
+\begin{DoxyCompactList}\small\item\em Insere um post na heap tendo como referência o parâmetro da ordenação. \end{DoxyCompactList}\item 
+Post \hyperlink{heap_8c_a9116376c941be4c76d96916042f4d1e5}{heap\+\_\+pop} (Heap \hyperlink{structheap}{heap}, char ord)
+\begin{DoxyCompactList}\small\item\em Retorna o \char`\"{}maior\char`\"{} post segundo a ordenação dada. \end{DoxyCompactList}\item 
+int \hyperlink{heap_8c_a09a4c1174fbd9f4164ae68d20cea24b5}{heap\+\_\+count} (Heap \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Retorna o número de posts que uma dada heap contém. \end{DoxyCompactList}\item 
+int \hyperlink{heap_8c_a1128d5e75bb67d2d8b5f35574295fb62}{cont\+\_\+\+RP} (Heap \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Retorna o número de perguntas e respostas que uma dada heap de posts contém. \end{DoxyCompactList}\item 
+Post \hyperlink{heap_8c_a952e32177af090cd2480a3183b242155}{get\+IndP} (Heap h, int i)
+\begin{DoxyCompactList}\small\item\em Retorna o Post que se encontrada num indice i de uma dada heap. \end{DoxyCompactList}\item 
+void \hyperlink{heap_8c_a085d0249b7c1c9e5b2de6333b9fdc92b}{heap\+\_\+free} (Heap \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por uma Heap. \end{DoxyCompactList}\item 
+void {\bfseries heap\+Pal\+\_\+free} (Heap \hyperlink{structheap}{heap})\hypertarget{heap_8c_a2e2677ca709a7d6cae69c2cfc211d998}{}\label{heap_8c_a2e2677ca709a7d6cae69c2cfc211d998}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contém a implementação de Max Heap\textquotesingle{}s de Posts. 
+
+
+
+\subsection{Function Documentation}
+\index{heap.\+c@{heap.\+c}!bubble\+Down@{bubble\+Down}}
+\index{bubble\+Down@{bubble\+Down}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{bubble\+Down(\+Heap heap, int n, char ord)}{bubbleDown(Heap heap, int n, char ord)}}]{\setlength{\rightskip}{0pt plus 5cm}static Heap bubble\+Down (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap, }
+\item[{int}]{n, }
+\item[{char}]{ord}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{heap_8c_a9206bc25fe50ab5a7e9980e10837f324}{}\label{heap_8c_a9206bc25fe50ab5a7e9980e10837f324}
+
+
+Realiza o bubble down da heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap a alterar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heap alterada. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!bubble\+Up@{bubble\+Up}}
+\index{bubble\+Up@{bubble\+Up}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{bubble\+Up(\+Heap heap, int i, char ord)}{bubbleUp(Heap heap, int i, char ord)}}]{\setlength{\rightskip}{0pt plus 5cm}static Heap bubble\+Up (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap, }
+\item[{int}]{i, }
+\item[{char}]{ord}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{heap_8c_ae688b66c4e24bc6d8c0b2e0f5ec1414b}{}\label{heap_8c_ae688b66c4e24bc6d8c0b2e0f5ec1414b}
+
+
+Realiza o bubble up da heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap a alterar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heap alterada. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!cont\+\_\+\+RP@{cont\+\_\+\+RP}}
+\index{cont\+\_\+\+RP@{cont\+\_\+\+RP}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{cont\+\_\+\+R\+P(\+Heap heap)}{cont_RP(Heap heap)}}]{\setlength{\rightskip}{0pt plus 5cm}int cont\+\_\+\+RP (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a1128d5e75bb67d2d8b5f35574295fb62}{}\label{heap_8c_a1128d5e75bb67d2d8b5f35574295fb62}
+
+
+Retorna o número de perguntas e respostas que uma dada heap de posts contém. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de posts na heap. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!get\+Heap\+Pal@{get\+Heap\+Pal}}
+\index{get\+Heap\+Pal@{get\+Heap\+Pal}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{get\+Heap\+Pal(\+Heap h)}{getHeapPal(Heap h)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+Heap\+Pal (
+\begin{DoxyParamCaption}
+\item[{Heap}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_ad750d8237bbcc3bad7b2183544f00f02}{}\label{heap_8c_ad750d8237bbcc3bad7b2183544f00f02}
+
+
+Devolve a palavra guardada na heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ palavra. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!get\+IndP@{get\+IndP}}
+\index{get\+IndP@{get\+IndP}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{get\+Ind\+P(\+Heap h, int i)}{getIndP(Heap h, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}Post get\+IndP (
+\begin{DoxyParamCaption}
+\item[{Heap}]{h, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a952e32177af090cd2480a3183b242155}{}\label{heap_8c_a952e32177af090cd2480a3183b242155}
+
+
+Retorna o Post que se encontrada num indice i de uma dada heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap. \\
+\hline
+{\em int} & i. return Post na posição i da heap. \\
+\hline
+\end{DoxyParams}
+\index{heap.\+c@{heap.\+c}!heap\+\_\+count@{heap\+\_\+count}}
+\index{heap\+\_\+count@{heap\+\_\+count}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+count(\+Heap heap)}{heap_count(Heap heap)}}]{\setlength{\rightskip}{0pt plus 5cm}int heap\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a09a4c1174fbd9f4164ae68d20cea24b5}{}\label{heap_8c_a09a4c1174fbd9f4164ae68d20cea24b5}
+
+
+Retorna o número de posts que uma dada heap contém. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de Posts na heap. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!heap\+\_\+free@{heap\+\_\+free}}
+\index{heap\+\_\+free@{heap\+\_\+free}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+free(\+Heap heap)}{heap_free(Heap heap)}}]{\setlength{\rightskip}{0pt plus 5cm}void heap\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a085d0249b7c1c9e5b2de6333b9fdc92b}{}\label{heap_8c_a085d0249b7c1c9e5b2de6333b9fdc92b}
+
+
+Liberta a memória alocada por uma Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & apontador para a heap a limpar da memória. \\
+\hline
+\end{DoxyParams}
+\index{heap.\+c@{heap.\+c}!heap\+\_\+pop@{heap\+\_\+pop}}
+\index{heap\+\_\+pop@{heap\+\_\+pop}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+pop(\+Heap heap, char ord)}{heap_pop(Heap heap, char ord)}}]{\setlength{\rightskip}{0pt plus 5cm}Post heap\+\_\+pop (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap, }
+\item[{char}]{ord}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a9116376c941be4c76d96916042f4d1e5}{}\label{heap_8c_a9116376c941be4c76d96916042f4d1e5}
+
+
+Retorna o \char`\"{}maior\char`\"{} post segundo a ordenação dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap de todos os posts. \\
+\hline
+{\em char} & ordenação segundo a qual a Heap se ordena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Post removido. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!heap\+\_\+push@{heap\+\_\+push}}
+\index{heap\+\_\+push@{heap\+\_\+push}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+push(\+Heap heap, Post post, char ord)}{heap_push(Heap heap, Post post, char ord)}}]{\setlength{\rightskip}{0pt plus 5cm}Heap heap\+\_\+push (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap, }
+\item[{Post}]{post, }
+\item[{char}]{ord}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a57b1aa828dd4a3a09eecdbe2c2a014d4}{}\label{heap_8c_a57b1aa828dd4a3a09eecdbe2c2a014d4}
+
+
+Insere um post na heap tendo como referência o parâmetro da ordenação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Heap} & heap. \\
+\hline
+{\em Post} & post. \\
+\hline
+{\em char} & caracter que determina a ordenação (D-\/\+Data do post, S-\/\+Score do post, R-\/\+Número de respostas do post, M-\/\+Média ponderada da classificação do post). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heap com o novo Post adicionado. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!init\+Heap@{init\+Heap}}
+\index{init\+Heap@{init\+Heap}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{init\+Heap()}{initHeap()}}]{\setlength{\rightskip}{0pt plus 5cm}Heap init\+Heap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_abf46e093e8100cebe3aca6545aead1c5}{}\label{heap_8c_abf46e093e8100cebe3aca6545aead1c5}
+
+
+Inicia uma nova heap de posts. 
+
+\begin{DoxyReturn}{Returns}
+Heap inicializada. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!init\+Heap\+Pal@{init\+Heap\+Pal}}
+\index{init\+Heap\+Pal@{init\+Heap\+Pal}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{init\+Heap\+Pal(char $\ast$word)}{initHeapPal(char *word)}}]{\setlength{\rightskip}{0pt plus 5cm}Heap init\+Heap\+Pal (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{word}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a723709e7ce9f31c874a07eaf6b800db5}{}\label{heap_8c_a723709e7ce9f31c874a07eaf6b800db5}
+
+
+Inicia uma nova heap de posts que guarda adicionalmente uma dada palavra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & palavra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heap inicializada. 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!mais\+Recente@{mais\+Recente}}
+\index{mais\+Recente@{mais\+Recente}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{mais\+Recente(\+Date date1, Date date2)}{maisRecente(Date date1, Date date2)}}]{\setlength{\rightskip}{0pt plus 5cm}int mais\+Recente (
+\begin{DoxyParamCaption}
+\item[{Date}]{date1, }
+\item[{Date}]{date2}
+\end{DoxyParamCaption}
+)}\hypertarget{heap_8c_a2c1c49ae1a90173c3552e091f075872f}{}\label{heap_8c_a2c1c49ae1a90173c3552e091f075872f}
+
+
+Compara duas datas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Date} & data1. \\
+\hline
+{\em Date} & data2. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int resultado da comparação (-\/1 se data1 for a mais recente, 1 se data2 for a mais recente ou 0 se forem iguais). 
+\end{DoxyReturn}
+\index{heap.\+c@{heap.\+c}!swap@{swap}}
+\index{swap@{swap}!heap.\+c@{heap.\+c}}
+\subsubsection[{\texorpdfstring{swap(\+Heap heap, int n1, int n2)}{swap(Heap heap, int n1, int n2)}}]{\setlength{\rightskip}{0pt plus 5cm}static Heap swap (
+\begin{DoxyParamCaption}
+\item[{Heap}]{heap, }
+\item[{int}]{n1, }
+\item[{int}]{n2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{heap_8c_a63a74d52123275bd3abe9b01cecf3131}{}\label{heap_8c_a63a74d52123275bd3abe9b01cecf3131}
+
+
+Troca dois elementos da heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & posição do primeiro elemento. \\
+\hline
+{\em int} & posição do segundo elemento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Heap alterada. 
+\end{DoxyReturn}

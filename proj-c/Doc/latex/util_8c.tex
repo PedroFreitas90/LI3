@@ -1,0 +1,264 @@
+\hypertarget{util_8c}{}\section{lib/util.c File Reference}
+\label{util_8c}\index{lib/util.\+c@{lib/util.\+c}}
+
+
+Ficheiro que contém a implementação de estruturas e funções úteis para resolução de querys.  
+
+
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+Include dependency graph for util.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{util_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structrespostas}{respostas}
+\item 
+struct \hyperlink{structduplo}{duplo}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Res\+Post \hyperlink{util_8c_ae6f056f8633ec031784e23932c508d25}{init\+Res\+Post} (long pid)
+\begin{DoxyCompactList}\small\item\em Retorna uma estrutura Res\+Post inicializada. \end{DoxyCompactList}\item 
+Key \hyperlink{util_8c_a60434069ee0240fea86b5738cf6d7d21}{get\+Res\+Post\+Parent} (Res\+Post r)
+\begin{DoxyCompactList}\small\item\em Retorna o ID guardado na estrutura. \end{DoxyCompactList}\item 
+Heap \hyperlink{util_8c_a20739fe1a3e9cbdf9dd679c4c18854b3}{get\+Res\+Post\+Heap} (Res\+Post r)
+\begin{DoxyCompactList}\small\item\em Retorna a heap guardada na estrutura. \end{DoxyCompactList}\item 
+void {\bfseries free\+Res\+Post} (Res\+Post r)\hypertarget{util_8c_a448f9cc7803754e9ab585dbb1366bfa3}{}\label{util_8c_a448f9cc7803754e9ab585dbb1366bfa3}
+
+\item 
+L\+O\+N\+G\+\_\+list \hyperlink{util_8c_ab4474badc0ede23e8a7b095cca56ac3e}{init\+\_\+ll} (int N)
+\begin{DoxyCompactList}\small\item\em Função que inicializa uma L\+O\+N\+G\+\_\+list. \end{DoxyCompactList}\item 
+Duplos \hyperlink{util_8c_a4c5c29e5f165c0df9df3fda08b3e7d34}{init\+Duplos} (int N)
+\begin{DoxyCompactList}\small\item\em Função que inicializa a estrutura Duplos. \end{DoxyCompactList}\item 
+void \hyperlink{util_8c_a796d89b27b73c711760d6e40a330c868}{set\+\_\+duplos\+\_\+pos} (Duplos dup, int i)
+\begin{DoxyCompactList}\small\item\em Função que altera o campo \char`\"{}pos\char`\"{} de um Duplos. \end{DoxyCompactList}\item 
+Duplos \hyperlink{util_8c_a6ad5de0a44d77ff16ddec8257d141753}{set\+\_\+duplos\+\_\+tnum} (Duplos dup, T\+Num tn)
+\begin{DoxyCompactList}\small\item\em Função que introduz um par Tag-\/\+Num em um Duplos. \end{DoxyCompactList}\item 
+Duplos \hyperlink{util_8c_a85d927844a42e39f9ddc341fd1db7042}{insere\+\_\+\+Duplos} (L\+O\+N\+G\+\_\+list ll, T\+Num tn, int N, int i)
+\begin{DoxyCompactList}\small\item\em Função cria e preenche os parâmetros de um Duplos. \end{DoxyCompactList}\item 
+L\+O\+N\+G\+\_\+list \hyperlink{util_8c_aafa3001f0aac7709715f4059551f87a0}{get\+\_\+duplos\+\_\+ll} (Duplos dup)
+\begin{DoxyCompactList}\small\item\em Função que retorna a L\+O\+N\+G\+\_\+list de um Duplos. \end{DoxyCompactList}\item 
+T\+Num \hyperlink{util_8c_a625c56a7565e05e3bcffdd63134166a7}{get\+\_\+duplos\+\_\+tnum} (Duplos dup)
+\begin{DoxyCompactList}\small\item\em Função que retorna um par Tag-\/\+Num de um Duplos. \end{DoxyCompactList}\item 
+int \hyperlink{util_8c_a5a151853e521b4e046c678ea71abee7c}{get\+\_\+duplos\+\_\+pos} (Duplos dup)
+\begin{DoxyCompactList}\small\item\em Função que retorna o parâmetro \textquotesingle{}pos\textquotesingle{} de um Duplos. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{util_8c_a6a52cab09d93c8d5574a1380ab0891f7}{mystrdups} (char $\ast$$\ast$s)
+\begin{DoxyCompactList}\small\item\em Função que copia um array de strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contém a implementação de estruturas e funções úteis para resolução de querys. 
+
+
+
+\subsection{Function Documentation}
+\index{util.\+c@{util.\+c}!get\+\_\+duplos\+\_\+ll@{get\+\_\+duplos\+\_\+ll}}
+\index{get\+\_\+duplos\+\_\+ll@{get\+\_\+duplos\+\_\+ll}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+duplos\+\_\+ll(\+Duplos dup)}{get_duplos_ll(Duplos dup)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list get\+\_\+duplos\+\_\+ll (
+\begin{DoxyParamCaption}
+\item[{Duplos}]{dup}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_aafa3001f0aac7709715f4059551f87a0}{}\label{util_8c_aafa3001f0aac7709715f4059551f87a0}
+
+
+Função que retorna a L\+O\+N\+G\+\_\+list de um Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Duplos} & duplo. return L\+O\+N\+G\+\_\+list do Duplos. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!get\+\_\+duplos\+\_\+pos@{get\+\_\+duplos\+\_\+pos}}
+\index{get\+\_\+duplos\+\_\+pos@{get\+\_\+duplos\+\_\+pos}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+duplos\+\_\+pos(\+Duplos dup)}{get_duplos_pos(Duplos dup)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+duplos\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{Duplos}]{dup}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a5a151853e521b4e046c678ea71abee7c}{}\label{util_8c_a5a151853e521b4e046c678ea71abee7c}
+
+
+Função que retorna o parâmetro \textquotesingle{}pos\textquotesingle{} de um Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Duplos} & duplo. return int inteiro do parâmetro \textquotesingle{}pos\textquotesingle{} de um Duplos. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!get\+\_\+duplos\+\_\+tnum@{get\+\_\+duplos\+\_\+tnum}}
+\index{get\+\_\+duplos\+\_\+tnum@{get\+\_\+duplos\+\_\+tnum}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+duplos\+\_\+tnum(\+Duplos dup)}{get_duplos_tnum(Duplos dup)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+Num get\+\_\+duplos\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{Duplos}]{dup}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a625c56a7565e05e3bcffdd63134166a7}{}\label{util_8c_a625c56a7565e05e3bcffdd63134166a7}
+
+
+Função que retorna um par Tag-\/\+Num de um Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Duplos} & duplo. return T\+Num par Tag-\/\+Num. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!get\+Res\+Post\+Heap@{get\+Res\+Post\+Heap}}
+\index{get\+Res\+Post\+Heap@{get\+Res\+Post\+Heap}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{get\+Res\+Post\+Heap(\+Res\+Post r)}{getResPostHeap(ResPost r)}}]{\setlength{\rightskip}{0pt plus 5cm}Heap get\+Res\+Post\+Heap (
+\begin{DoxyParamCaption}
+\item[{Res\+Post}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a20739fe1a3e9cbdf9dd679c4c18854b3}{}\label{util_8c_a20739fe1a3e9cbdf9dd679c4c18854b3}
+
+
+Retorna a heap guardada na estrutura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Res\+Post.} & return Heap. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!get\+Res\+Post\+Parent@{get\+Res\+Post\+Parent}}
+\index{get\+Res\+Post\+Parent@{get\+Res\+Post\+Parent}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{get\+Res\+Post\+Parent(\+Res\+Post r)}{getResPostParent(ResPost r)}}]{\setlength{\rightskip}{0pt plus 5cm}Key get\+Res\+Post\+Parent (
+\begin{DoxyParamCaption}
+\item[{Res\+Post}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a60434069ee0240fea86b5738cf6d7d21}{}\label{util_8c_a60434069ee0240fea86b5738cf6d7d21}
+
+
+Retorna o ID guardado na estrutura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Res\+Post.} & return Key ID. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!init\+\_\+ll@{init\+\_\+ll}}
+\index{init\+\_\+ll@{init\+\_\+ll}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+ll(int N)}{init_ll(int N)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+O\+N\+G\+\_\+list init\+\_\+ll (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_ab4474badc0ede23e8a7b095cca56ac3e}{}\label{util_8c_ab4474badc0ede23e8a7b095cca56ac3e}
+
+
+Função que inicializa uma L\+O\+N\+G\+\_\+list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & tamanho da L\+O\+N\+G\+\_\+list. return L\+O\+N\+G\+\_\+list criada e inicializada. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!init\+Duplos@{init\+Duplos}}
+\index{init\+Duplos@{init\+Duplos}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{init\+Duplos(int N)}{initDuplos(int N)}}]{\setlength{\rightskip}{0pt plus 5cm}Duplos init\+Duplos (
+\begin{DoxyParamCaption}
+\item[{int}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a4c5c29e5f165c0df9df3fda08b3e7d34}{}\label{util_8c_a4c5c29e5f165c0df9df3fda08b3e7d34}
+
+
+Função que inicializa a estrutura Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & tamanho da L\+O\+N\+G\+\_\+list do duplos. return Duplos inicializado \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!init\+Res\+Post@{init\+Res\+Post}}
+\index{init\+Res\+Post@{init\+Res\+Post}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{init\+Res\+Post(long pid)}{initResPost(long pid)}}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Post init\+Res\+Post (
+\begin{DoxyParamCaption}
+\item[{long}]{pid}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_ae6f056f8633ec031784e23932c508d25}{}\label{util_8c_ae6f056f8633ec031784e23932c508d25}
+
+
+Retorna uma estrutura Res\+Post inicializada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & id de uma pergunta. return Res\+Post estrutura inicializada. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!insere\+\_\+\+Duplos@{insere\+\_\+\+Duplos}}
+\index{insere\+\_\+\+Duplos@{insere\+\_\+\+Duplos}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{insere\+\_\+\+Duplos(\+L\+O\+N\+G\+\_\+list ll, T\+Num tn, int N, int i)}{insere_Duplos(LONG_list ll, TNum tn, int N, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}Duplos insere\+\_\+\+Duplos (
+\begin{DoxyParamCaption}
+\item[{L\+O\+N\+G\+\_\+list}]{ll, }
+\item[{T\+Num}]{tn, }
+\item[{int}]{N, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a85d927844a42e39f9ddc341fd1db7042}{}\label{util_8c_a85d927844a42e39f9ddc341fd1db7042}
+
+
+Função cria e preenche os parâmetros de um Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+O\+N\+G\+\_\+list} & lista a ser introduzida. \\
+\hline
+{\em T\+Num} & par Tag-\/\+Num a ser introduzido. \\
+\hline
+{\em int} & tamanho da L\+O\+N\+G\+\_\+list. \\
+\hline
+{\em int} & índice a ser introduzido. return Duplos criado. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!mystrdups@{mystrdups}}
+\index{mystrdups@{mystrdups}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{mystrdups(char $\ast$$\ast$s)}{mystrdups(char **s)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ mystrdups (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a6a52cab09d93c8d5574a1380ab0891f7}{}\label{util_8c_a6a52cab09d93c8d5574a1380ab0891f7}
+
+
+Função que copia um array de strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & Array de strings. return char$\ast$$\ast$ Array de strings copiado. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!set\+\_\+duplos\+\_\+pos@{set\+\_\+duplos\+\_\+pos}}
+\index{set\+\_\+duplos\+\_\+pos@{set\+\_\+duplos\+\_\+pos}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+duplos\+\_\+pos(\+Duplos dup, int i)}{set_duplos_pos(Duplos dup, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+duplos\+\_\+pos (
+\begin{DoxyParamCaption}
+\item[{Duplos}]{dup, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a796d89b27b73c711760d6e40a330c868}{}\label{util_8c_a796d89b27b73c711760d6e40a330c868}
+
+
+Função que altera o campo \char`\"{}pos\char`\"{} de um Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & número a ser introduzido no campo \char`\"{}pos\char`\"{} do Duplos. \\
+\hline
+\end{DoxyParams}
+\index{util.\+c@{util.\+c}!set\+\_\+duplos\+\_\+tnum@{set\+\_\+duplos\+\_\+tnum}}
+\index{set\+\_\+duplos\+\_\+tnum@{set\+\_\+duplos\+\_\+tnum}!util.\+c@{util.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+duplos\+\_\+tnum(\+Duplos dup, T\+Num tn)}{set_duplos_tnum(Duplos dup, TNum tn)}}]{\setlength{\rightskip}{0pt plus 5cm}Duplos set\+\_\+duplos\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{Duplos}]{dup, }
+\item[{T\+Num}]{tn}
+\end{DoxyParamCaption}
+)}\hypertarget{util_8c_a6ad5de0a44d77ff16ddec8257d141753}{}\label{util_8c_a6ad5de0a44d77ff16ddec8257d141753}
+
+
+Função que introduz um par Tag-\/\+Num em um Duplos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Duplos} & duplo de L\+O\+N\+G\+\_\+list e T\+Num. return Duplos inicializado \\
+\hline
+\end{DoxyParams}

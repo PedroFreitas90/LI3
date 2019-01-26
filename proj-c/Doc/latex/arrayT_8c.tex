@@ -1,0 +1,316 @@
+\hypertarget{arrayT_8c}{}\section{lib/arrayT.c File Reference}
+\label{arrayT_8c}\index{lib/array\+T.\+c@{lib/array\+T.\+c}}
+
+
+Ficheiro que contém a implementação de um Array com uma \hyperlink{structtag}{tag(char$\ast$)} e o número de ocorrências.  
+
+
+{\ttfamily \#include \char`\"{}array\+T.\+h\char`\"{}}\\*
+Include dependency graph for array\+T.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{arrayT_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtagnum}{tagnum}
+\item 
+struct \hyperlink{structarraytagnum}{arraytagnum}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+T\+Num \hyperlink{arrayT_8c_a6eccd372126c735ddc91d972aa04e9fe}{insere\+\_\+tagnum} (A\+T\+Num a, T\+Num t)
+\begin{DoxyCompactList}\small\item\em Insere um par Tag-\/\+Num no array. \end{DoxyCompactList}\item 
+T\+Num \hyperlink{arrayT_8c_a0a2a4ce157589de008482e3e0993a11f}{inc\+T\+Num} (T\+Num pair)
+\begin{DoxyCompactList}\small\item\em Incrementa o número de ocorrências da tag. \end{DoxyCompactList}\item 
+T\+Num \hyperlink{arrayT_8c_a41dd540d9cf0d0fb33e3bd0b4492552e}{create\+\_\+tnum\+\_\+pair} (char $\ast$fst, int snd)
+\begin{DoxyCompactList}\small\item\em Cria um par Tag-\/\+Num. \end{DoxyCompactList}\item 
+void \hyperlink{arrayT_8c_abbc55eb3caa9e365739942bd9ff3d497}{set\+\_\+tag\+\_\+tnum} (T\+Num pair, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Altera o campo \char`\"{}tag\char`\"{} de um T\+Num. \end{DoxyCompactList}\item 
+void \hyperlink{arrayT_8c_acd4b96fdb4c967d3b5aff403fee3fe39}{set\+\_\+num\+\_\+tnum} (T\+Num pair, int num)
+\begin{DoxyCompactList}\small\item\em Altera o campo \char`\"{}num\char`\"{} de um T\+Num. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{arrayT_8c_a99edf9d86c527b53b434e35f133350f5}{get\+\_\+tag\+\_\+tnum} (T\+Num pair)
+\begin{DoxyCompactList}\small\item\em Retorna a string com o nome da tag. \end{DoxyCompactList}\item 
+int \hyperlink{arrayT_8c_a5cbb235d67fbd34af6d26a9a414fba72}{get\+\_\+num\+\_\+tnum} (T\+Num pair)
+\begin{DoxyCompactList}\small\item\em Retorna o número de ocorrências de uma tag. \end{DoxyCompactList}\item 
+void \hyperlink{arrayT_8c_acd330c8b1e9f7a4456bc4ef307fa939b}{free\+\_\+tnum} (T\+Num pair)
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por um par Tag-\/\+Num. \end{DoxyCompactList}\item 
+T\+Num \hyperlink{arrayT_8c_a8d50b369aff0c3800d385bae4048db03}{get\+\_\+atnum\+\_\+tnum} (A\+T\+Num pares, int index)
+\begin{DoxyCompactList}\small\item\em Retorna um par Tag-\/\+Num de um determinado índice de um array de pares Tag-\/\+Num. \end{DoxyCompactList}\item 
+long \hyperlink{arrayT_8c_a94e991303e5ad9c09f141a7ccf8651b0}{get\+\_\+atnum\+\_\+used} (A\+T\+Num a)
+\begin{DoxyCompactList}\small\item\em Retorna o número de índices usados. \end{DoxyCompactList}\item 
+long \hyperlink{arrayT_8c_ac819edb6d77158b271be466f4a9e7f0a}{get\+\_\+atnum\+\_\+size} (A\+T\+Num pares)
+\begin{DoxyCompactList}\small\item\em Retorna o tamanho total do array. \end{DoxyCompactList}\item 
+A\+T\+Num \hyperlink{arrayT_8c_a7cc1f39b6813c3343fd22f96203135e7}{init\+\_\+atnum} (long N)
+\begin{DoxyCompactList}\small\item\em Cria um array de pares Tag-\/\+Num. \end{DoxyCompactList}\item 
+void \hyperlink{arrayT_8c_a287a7386d14c8d4fb56a885fd1744f54}{bubble\+T\+Num\+Sort} (A\+T\+Num pares)
+\begin{DoxyCompactList}\small\item\em Função que ordena por ordem decrescente do número de ocorrências os pares Tag-\/\+Num. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contém a implementação de um Array com uma \hyperlink{structtag}{tag(char$\ast$)} e o número de ocorrências. 
+
+
+
+\subsection{Function Documentation}
+\index{array\+T.\+c@{array\+T.\+c}!bubble\+T\+Num\+Sort@{bubble\+T\+Num\+Sort}}
+\index{bubble\+T\+Num\+Sort@{bubble\+T\+Num\+Sort}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{bubble\+T\+Num\+Sort(\+A\+T\+Num pares)}{bubbleTNumSort(ATNum pares)}}]{\setlength{\rightskip}{0pt plus 5cm}void bubble\+T\+Num\+Sort (
+\begin{DoxyParamCaption}
+\item[{A\+T\+Num}]{pares}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a287a7386d14c8d4fb56a885fd1744f54}{}\label{arrayT_8c_a287a7386d14c8d4fb56a885fd1744f54}
+
+
+Função que ordena por ordem decrescente do número de ocorrências os pares Tag-\/\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+T\+Num} & array de pares T\+Num. \\
+\hline
+\end{DoxyParams}
+\index{array\+T.\+c@{array\+T.\+c}!create\+\_\+tnum\+\_\+pair@{create\+\_\+tnum\+\_\+pair}}
+\index{create\+\_\+tnum\+\_\+pair@{create\+\_\+tnum\+\_\+pair}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{create\+\_\+tnum\+\_\+pair(char $\ast$fst, int snd)}{create_tnum_pair(char *fst, int snd)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+Num create\+\_\+tnum\+\_\+pair (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fst, }
+\item[{int}]{snd}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a41dd540d9cf0d0fb33e3bd0b4492552e}{}\label{arrayT_8c_a41dd540d9cf0d0fb33e3bd0b4492552e}
+
+
+Cria um par Tag-\/\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & string com o nome da tag. \\
+\hline
+{\em int} & número de ocorrências da tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+Num par Tag-\/\+Num. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!free\+\_\+tnum@{free\+\_\+tnum}}
+\index{free\+\_\+tnum@{free\+\_\+tnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+tnum(\+T\+Num pair)}{free_tnum(TNum pair)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{T\+Num}]{pair}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_acd330c8b1e9f7a4456bc4ef307fa939b}{}\label{arrayT_8c_acd330c8b1e9f7a4456bc4ef307fa939b}
+
+
+Liberta a memória alocada por um par Tag-\/\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+\end{DoxyParams}
+\index{array\+T.\+c@{array\+T.\+c}!get\+\_\+atnum\+\_\+size@{get\+\_\+atnum\+\_\+size}}
+\index{get\+\_\+atnum\+\_\+size@{get\+\_\+atnum\+\_\+size}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+atnum\+\_\+size(\+A\+T\+Num pares)}{get_atnum_size(ATNum pares)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+atnum\+\_\+size (
+\begin{DoxyParamCaption}
+\item[{A\+T\+Num}]{pares}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_ac819edb6d77158b271be466f4a9e7f0a}{}\label{arrayT_8c_ac819edb6d77158b271be466f4a9e7f0a}
+
+
+Retorna o tamanho total do array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+T\+Num} & array de pares T\+Num. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long tamanho total do array. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!get\+\_\+atnum\+\_\+tnum@{get\+\_\+atnum\+\_\+tnum}}
+\index{get\+\_\+atnum\+\_\+tnum@{get\+\_\+atnum\+\_\+tnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+atnum\+\_\+tnum(\+A\+T\+Num pares, int index)}{get_atnum_tnum(ATNum pares, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+Num get\+\_\+atnum\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{A\+T\+Num}]{pares, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a8d50b369aff0c3800d385bae4048db03}{}\label{arrayT_8c_a8d50b369aff0c3800d385bae4048db03}
+
+
+Retorna um par Tag-\/\+Num de um determinado índice de um array de pares Tag-\/\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+T\+Num} & array de pares T\+Num. \\
+\hline
+{\em int} & índice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+Num par Tag-\/\+Num. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!get\+\_\+atnum\+\_\+used@{get\+\_\+atnum\+\_\+used}}
+\index{get\+\_\+atnum\+\_\+used@{get\+\_\+atnum\+\_\+used}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+atnum\+\_\+used(\+A\+T\+Num a)}{get_atnum_used(ATNum a)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+\_\+atnum\+\_\+used (
+\begin{DoxyParamCaption}
+\item[{A\+T\+Num}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a94e991303e5ad9c09f141a7ccf8651b0}{}\label{arrayT_8c_a94e991303e5ad9c09f141a7ccf8651b0}
+
+
+Retorna o número de índices usados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+T\+Num} & array de pares T\+Num. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de índices usados no array. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!get\+\_\+num\+\_\+tnum@{get\+\_\+num\+\_\+tnum}}
+\index{get\+\_\+num\+\_\+tnum@{get\+\_\+num\+\_\+tnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+num\+\_\+tnum(\+T\+Num pair)}{get_num_tnum(TNum pair)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+num\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{T\+Num}]{pair}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a5cbb235d67fbd34af6d26a9a414fba72}{}\label{arrayT_8c_a5cbb235d67fbd34af6d26a9a414fba72}
+
+
+Retorna o número de ocorrências de uma tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int número de ocrrências da tag. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!get\+\_\+tag\+\_\+tnum@{get\+\_\+tag\+\_\+tnum}}
+\index{get\+\_\+tag\+\_\+tnum@{get\+\_\+tag\+\_\+tnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+tag\+\_\+tnum(\+T\+Num pair)}{get_tag_tnum(TNum pair)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+\_\+tag\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{T\+Num}]{pair}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a99edf9d86c527b53b434e35f133350f5}{}\label{arrayT_8c_a99edf9d86c527b53b434e35f133350f5}
+
+
+Retorna a string com o nome da tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ string com o nome da tag. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!inc\+T\+Num@{inc\+T\+Num}}
+\index{inc\+T\+Num@{inc\+T\+Num}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{inc\+T\+Num(\+T\+Num pair)}{incTNum(TNum pair)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+Num inc\+T\+Num (
+\begin{DoxyParamCaption}
+\item[{T\+Num}]{pair}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a0a2a4ce157589de008482e3e0993a11f}{}\label{arrayT_8c_a0a2a4ce157589de008482e3e0993a11f}
+
+
+Incrementa o número de ocorrências da tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+T\+Num array de pares. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!init\+\_\+atnum@{init\+\_\+atnum}}
+\index{init\+\_\+atnum@{init\+\_\+atnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{init\+\_\+atnum(long N)}{init_atnum(long N)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+T\+Num init\+\_\+atnum (
+\begin{DoxyParamCaption}
+\item[{long}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a7cc1f39b6813c3343fd22f96203135e7}{}\label{arrayT_8c_a7cc1f39b6813c3343fd22f96203135e7}
+
+
+Cria um array de pares Tag-\/\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & tamanho total (inicial) do aray. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+T\+Num array de pares Tag-\/\+Num criado. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!insere\+\_\+tagnum@{insere\+\_\+tagnum}}
+\index{insere\+\_\+tagnum@{insere\+\_\+tagnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{insere\+\_\+tagnum(\+A\+T\+Num a, T\+Num t)}{insere_tagnum(ATNum a, TNum t)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+T\+Num insere\+\_\+tagnum (
+\begin{DoxyParamCaption}
+\item[{A\+T\+Num}]{a, }
+\item[{T\+Num}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_a6eccd372126c735ddc91d972aa04e9fe}{}\label{arrayT_8c_a6eccd372126c735ddc91d972aa04e9fe}
+
+
+Insere um par Tag-\/\+Num no array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+Tnum} & array de pares Tag-\/\+Num. \\
+\hline
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+T\+Num array de pares. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!set\+\_\+num\+\_\+tnum@{set\+\_\+num\+\_\+tnum}}
+\index{set\+\_\+num\+\_\+tnum@{set\+\_\+num\+\_\+tnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+num\+\_\+tnum(\+T\+Num pair, int num)}{set_num_tnum(TNum pair, int num)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+num\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{T\+Num}]{pair, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_acd4b96fdb4c967d3b5aff403fee3fe39}{}\label{arrayT_8c_acd4b96fdb4c967d3b5aff403fee3fe39}
+
+
+Altera o campo \char`\"{}num\char`\"{} de um T\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+{\em int} & número de ocorrências a colocar no par. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+T\+Num array de pares. 
+\end{DoxyReturn}
+\index{array\+T.\+c@{array\+T.\+c}!set\+\_\+tag\+\_\+tnum@{set\+\_\+tag\+\_\+tnum}}
+\index{set\+\_\+tag\+\_\+tnum@{set\+\_\+tag\+\_\+tnum}!array\+T.\+c@{array\+T.\+c}}
+\subsubsection[{\texorpdfstring{set\+\_\+tag\+\_\+tnum(\+T\+Num pair, char $\ast$str)}{set_tag_tnum(TNum pair, char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+tag\+\_\+tnum (
+\begin{DoxyParamCaption}
+\item[{T\+Num}]{pair, }
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{arrayT_8c_abbc55eb3caa9e365739942bd9ff3d497}{}\label{arrayT_8c_abbc55eb3caa9e365739942bd9ff3d497}
+
+
+Altera o campo \char`\"{}tag\char`\"{} de um T\+Num. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Num} & par Tag-\/\+Num. \\
+\hline
+{\em char$\ast$} & string com o nome da tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+Num par Tag-\/\+Num. 
+\end{DoxyReturn}

@@ -1,0 +1,214 @@
+\hypertarget{heapU_8c}{}\section{lib/heapU.c File Reference}
+\label{heapU_8c}\index{lib/heap\+U.\+c@{lib/heap\+U.\+c}}
+
+
+Ficheiro que contém a implementação de Max Heap\textquotesingle{}s.  
+
+
+{\ttfamily \#include \char`\"{}heap\+U.\+h\char`\"{}}\\*
+Include dependency graph for heap\+U.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{heapU_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structheapu}{heapu}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries P\+AI}(i)~(i-\/1)/2\hypertarget{heapU_8c_a14497210befd92eb06223d770691914f}{}\label{heapU_8c_a14497210befd92eb06223d770691914f}
+
+\item 
+\#define {\bfseries E\+S\+Q\+U\+E\+R\+DO}(i)~2$\ast$i + 1\hypertarget{heapU_8c_aec0cd9b4eb09bfe7a565a67af16afe93}{}\label{heapU_8c_aec0cd9b4eb09bfe7a565a67af16afe93}
+
+\item 
+\#define {\bfseries D\+I\+R\+E\+I\+TO}(i)~2$\ast$i + 2\hypertarget{heapU_8c_ac6e409ddb66a55671170033763e3bb41}{}\label{heapU_8c_ac6e409ddb66a55671170033763e3bb41}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{heapU_8c_ae5951c47c7821b6a4952d56c5961f20a}{swapU} (HeapU \hyperlink{structheap}{heap}, int n1, int n2)
+\begin{DoxyCompactList}\small\item\em Troca dois elementos da heap. \end{DoxyCompactList}\item 
+static HeapU \hyperlink{heapU_8c_acd15aceb37c9c83fc919e6073ee0246f}{bubble\+DownU} (HeapU \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Realiza o bubble down da Heap. \end{DoxyCompactList}\item 
+static HeapU \hyperlink{heapU_8c_a3696fda6ee2450ff9a0ce984190c6c08}{bubble\+UpU} (HeapU \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Realiza o bubble up da heap. \end{DoxyCompactList}\item 
+HeapU \hyperlink{heapU_8c_a71e13067d181115791873282b7d4566d}{init\+HeapU} ()
+\begin{DoxyCompactList}\small\item\em Inicia uma nova Heap. \end{DoxyCompactList}\item 
+HeapU \hyperlink{heapU_8c_ad48877be615e59513222ebc1e37ce60c}{heap\+\_\+pushU} (HeapU \hyperlink{structheap}{heap}, long id, long qnt)
+\begin{DoxyCompactList}\small\item\em Insere na Heap tendo como referência a quantidade. \end{DoxyCompactList}\item 
+long \hyperlink{heapU_8c_a17a5145c43ad902b976f7b7bb41316ff}{heap\+\_\+popU} (HeapU \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Retorna o maior elemento da Heap. \end{DoxyCompactList}\item 
+int \hyperlink{heapU_8c_ae66235cc59d2729360f325539e919f70}{heap\+\_\+countU} (HeapU \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Retorna o número de elementos de uma Heap. \end{DoxyCompactList}\item 
+void \hyperlink{heapU_8c_a0fd1f3ded75be8fd561d8b2ee7434fb0}{heap\+\_\+freeU} (HeapU \hyperlink{structheap}{heap})
+\begin{DoxyCompactList}\small\item\em Liberta a memória alocada por uma HeapU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ficheiro que contém a implementação de Max Heap\textquotesingle{}s. 
+
+
+
+\subsection{Function Documentation}
+\index{heap\+U.\+c@{heap\+U.\+c}!bubble\+DownU@{bubble\+DownU}}
+\index{bubble\+DownU@{bubble\+DownU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{bubble\+Down\+U(\+Heap\+U heap)}{bubbleDownU(HeapU heap)}}]{\setlength{\rightskip}{0pt plus 5cm}static HeapU bubble\+DownU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{heapU_8c_acd15aceb37c9c83fc919e6073ee0246f}{}\label{heapU_8c_acd15aceb37c9c83fc919e6073ee0246f}
+
+
+Realiza o bubble down da Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HeapU} & heap a alterar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HeapU alterada. 
+\end{DoxyReturn}
+\index{heap\+U.\+c@{heap\+U.\+c}!bubble\+UpU@{bubble\+UpU}}
+\index{bubble\+UpU@{bubble\+UpU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{bubble\+Up\+U(\+Heap\+U heap)}{bubbleUpU(HeapU heap)}}]{\setlength{\rightskip}{0pt plus 5cm}static HeapU bubble\+UpU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{heapU_8c_a3696fda6ee2450ff9a0ce984190c6c08}{}\label{heapU_8c_a3696fda6ee2450ff9a0ce984190c6c08}
+
+
+Realiza o bubble up da heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HeapU} & heap a alterar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HeapU alterada. 
+\end{DoxyReturn}
+\index{heap\+U.\+c@{heap\+U.\+c}!heap\+\_\+countU@{heap\+\_\+countU}}
+\index{heap\+\_\+countU@{heap\+\_\+countU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+count\+U(\+Heap\+U heap)}{heap_countU(HeapU heap)}}]{\setlength{\rightskip}{0pt plus 5cm}int heap\+\_\+countU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap}
+\end{DoxyParamCaption}
+)}\hypertarget{heapU_8c_ae66235cc59d2729360f325539e919f70}{}\label{heapU_8c_ae66235cc59d2729360f325539e919f70}
+
+
+Retorna o número de elementos de uma Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HeapU} & heap. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Número de elementos da heap. 
+\end{DoxyReturn}
+\index{heap\+U.\+c@{heap\+U.\+c}!heap\+\_\+freeU@{heap\+\_\+freeU}}
+\index{heap\+\_\+freeU@{heap\+\_\+freeU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+free\+U(\+Heap\+U heap)}{heap_freeU(HeapU heap)}}]{\setlength{\rightskip}{0pt plus 5cm}void heap\+\_\+freeU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap}
+\end{DoxyParamCaption}
+)}\hypertarget{heapU_8c_a0fd1f3ded75be8fd561d8b2ee7434fb0}{}\label{heapU_8c_a0fd1f3ded75be8fd561d8b2ee7434fb0}
+
+
+Liberta a memória alocada por uma HeapU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & apontador para a HeapU a limpar da memória. \\
+\hline
+\end{DoxyParams}
+\index{heap\+U.\+c@{heap\+U.\+c}!heap\+\_\+popU@{heap\+\_\+popU}}
+\index{heap\+\_\+popU@{heap\+\_\+popU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+pop\+U(\+Heap\+U heap)}{heap_popU(HeapU heap)}}]{\setlength{\rightskip}{0pt plus 5cm}long heap\+\_\+popU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap}
+\end{DoxyParamCaption}
+)}\hypertarget{heapU_8c_a17a5145c43ad902b976f7b7bb41316ff}{}\label{heapU_8c_a17a5145c43ad902b976f7b7bb41316ff}
+
+
+Retorna o maior elemento da Heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HeapU} & da qual se retira o elemento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id do elemento removido. 
+\end{DoxyReturn}
+\index{heap\+U.\+c@{heap\+U.\+c}!heap\+\_\+pushU@{heap\+\_\+pushU}}
+\index{heap\+\_\+pushU@{heap\+\_\+pushU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{heap\+\_\+push\+U(\+Heap\+U heap, long id, long qnt)}{heap_pushU(HeapU heap, long id, long qnt)}}]{\setlength{\rightskip}{0pt plus 5cm}HeapU heap\+\_\+pushU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap, }
+\item[{long}]{id, }
+\item[{long}]{qnt}
+\end{DoxyParamCaption}
+)}\hypertarget{heapU_8c_ad48877be615e59513222ebc1e37ce60c}{}\label{heapU_8c_ad48877be615e59513222ebc1e37ce60c}
+
+
+Insere na Heap tendo como referência a quantidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HeapU} & onde se insere. \\
+\hline
+{\em long} & id do elemento. \\
+\hline
+{\em long} & quantidade do elemento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HeapU com o novo elemento adicionado. 
+\end{DoxyReturn}
+\index{heap\+U.\+c@{heap\+U.\+c}!init\+HeapU@{init\+HeapU}}
+\index{init\+HeapU@{init\+HeapU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{init\+Heap\+U()}{initHeapU()}}]{\setlength{\rightskip}{0pt plus 5cm}HeapU init\+HeapU (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{heapU_8c_a71e13067d181115791873282b7d4566d}{}\label{heapU_8c_a71e13067d181115791873282b7d4566d}
+
+
+Inicia uma nova Heap. 
+
+\begin{DoxyReturn}{Returns}
+Nova HeapU nula. 
+\end{DoxyReturn}
+\index{heap\+U.\+c@{heap\+U.\+c}!swapU@{swapU}}
+\index{swapU@{swapU}!heap\+U.\+c@{heap\+U.\+c}}
+\subsubsection[{\texorpdfstring{swap\+U(\+Heap\+U heap, int n1, int n2)}{swapU(HeapU heap, int n1, int n2)}}]{\setlength{\rightskip}{0pt plus 5cm}static void swapU (
+\begin{DoxyParamCaption}
+\item[{HeapU}]{heap, }
+\item[{int}]{n1, }
+\item[{int}]{n2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{heapU_8c_ae5951c47c7821b6a4952d56c5961f20a}{}\label{heapU_8c_ae5951c47c7821b6a4952d56c5961f20a}
+
+
+Troca dois elementos da heap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & posição do primeiro elemento. \\
+\hline
+{\em int} & posição do segundo elemento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+HeapU alterada. 
+\end{DoxyReturn}

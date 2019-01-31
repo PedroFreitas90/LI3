@@ -1,9 +1,10 @@
-# reference_repo
-Repositório com ficheiros comuns a todos os projetos. 
+# reference_repo 
+Repository with all comun project's files.
 
-Estrutura do repositório:
+Repository's structure:
 
-- pasta `include`: contém todos os ficheiros `.h`
-- pasta `src`: contém o código realizado pelo grupo (ficheiros `.c`)
-- pasta `src/lib`: contém as definições dos tipos que constam na definição da interface do programa
-- pastas `src/obj` e `src/obj/lib`: conterão os ficheiros `.o` quando o programa for compilado
+
+-`include` folder : contain all `.h` files
+-`src` folder: contain all code made by the group (`.c` files)
+-`src/lib` folder: contain all type definition that are listed in program's interface
+-`src/obj` and `src/obj/lib` files : conterão os ficheiros `.o` quando o programa for compiladoadada

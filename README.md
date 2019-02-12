@@ -6,5 +6,5 @@ reputation), the top N answers (by votes), etc.
 
 This project had 2 different stages:
   -The first stage was made in C language, and we were advised to use glib (C library that help us to organize our information in 
-Binary Trees, AVL's our HashMap's already defined).
+Binary Trees, AVL's or HashMap's already defined).
   -The second stage was made in Java language. 
